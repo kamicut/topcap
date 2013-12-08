@@ -1,7 +1,7 @@
 var request 		= require('request');
-var qs 				= require('querystring');
+var qs 			= require('querystring');
 var EventEmitter 	= require('events').EventEmitter
-var config 			= require('./config.js')
+var config 		= require('./config.js')
 
 /* Topcap 
  * Connects to a Google Spreadsheet and a Google Apps Script
