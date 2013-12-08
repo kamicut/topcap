@@ -5,6 +5,7 @@ Using topcap, you can stream the data from your Google Spreadsheet as a Node.js 
 
 Installation
 ------------
+First clone the repo to your machine.
 
 You need to install a Google Apps script on your GDrive to use topcap. The script will notify the service when someone changes the spreadsheet so you don't have to sync your data.
 
@@ -15,6 +16,8 @@ You need to install a Google Apps script on your GDrive to use topcap. The scrip
       * Who has access to the app: 'Anyone, even anonymous'
 4.  Authorize the app
 5.  Copy the URL of your script
+
+To install the dependencies for Topcap use `npm install`
 
 Usage
 -----
