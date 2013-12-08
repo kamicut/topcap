@@ -21,5 +21,5 @@ To install the dependencies for Topcap use `npm install`
 
 Usage
 -----
-You need to modify the `config.js` file to hold the URL of your script, and the ID of your spreadhsheet.
+You need to modify the `config.js` file to hold the URL of your script, and the ID of your spreadsheet.
 Then simply `node run.js` to start getting data from your spreadsheet.
