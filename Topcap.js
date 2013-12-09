@@ -10,7 +10,6 @@ function Topcap(config) {
 	if (!(this instanceof Topcap )) return new Topcap(config)
 	EventEmitter.call(this)
 
-	this._id = config.id;
 	this._sheet = config.sheet;
 	this._scriptURL = config.scriptURL;
 	this._interval = config.interval || 5000;
@@ -23,7 +22,6 @@ Topcap.prototype = Object.create(EventEmitter.prototype)
 Topcap.prototype._doRequest = function() {
 	var self = this;
 	var params = {
-		id: this._id,
 		sheet: this._sheet,
 		time: this._time
 	}

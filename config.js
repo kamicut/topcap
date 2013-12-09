@@ -1,7 +1,7 @@
 var config = {
-	id: "0Aqv3NjQVGHDbdG03SjZCVl9CVVUyN0tDUUlGYnBQZ2c",
 	sheet: "Sheet1",
+	interval: 5000,
 	scriptURL: "https://script.google.com/macros/s/" + 
-		"AKfycbyUzHoQu8qKbmT07CQm7CIZf-7D4ZlNYbVtIqLW4snY1QS9864/exec"
+		"AKfycbxQiAhRgneNbagmZwHJ6RFrJiJtFA8IMutdzI7IPh_Bbi5DTqGw/exec"
 }
 module.exports = config
