@@ -5,26 +5,26 @@ Using topcap, you can stream the data from your Google Spreadsheet as a Node.js 
 
 Installation
 ------------
-First clone the repo to your machine.
+After cloning the repo, install Topcap dependencies using `npm install`
 
-You need to install a Google Apps script on your GDrive to use topcap. The script will notify the service when someone changes the spreadsheet so you don't have to sync your data.
+To use your own spreadsheet with Topcap do the following:
 
-1.  Create a new Google Apps Script from the GDrive menu
-2.  Add the content of Code.gs in the Code.gs panel
-3.  Choose Publish > Deploy as Web App. The parameters are: 
+1.  Make a copy of [this](https://docs.google.com/spreadsheet/ccc?key=0Aqv3NjQVGHDbdDB6NnZjdXZ1bTFIbmNvUGs0V2FSUlE#gid=0) spreadsheet `File > Make a Copy`
+2.  Authorize with `Authorize > Authorize Application`
+3.  Next go to to `Tools > Script Editor`
+3.  Choose `Publish > Deploy as Web App.` 
+      * Write 'init' or 'first commit' in "Save a New Version"
       * Execute the app: 'me'
       * Who has access to the app: 'Anyone, even anonymous'
-4.  Authorize the app
+      * Press publish
 5.  Copy the URL of your script
-
-To install the dependencies for Topcap use `npm install`
 
 Usage
 -----
-You need to modify the `config.js` file to hold the URL of your script, and the ID of your spreadsheet.
-
 ```javascript
-var tc = new Topcap(config) 
+var tc = new Topcap({
+	scriptURL: "YOUR-SCRIPT-URL"
+}) 
 
 tc.on('data', function(data) {
      if (data["updated"] == true) 
@@ -34,5 +34,4 @@ tc.on('data', function(data) {
 tc.on('error', function(error) {
  console.log(error);
 })
-
 ```
